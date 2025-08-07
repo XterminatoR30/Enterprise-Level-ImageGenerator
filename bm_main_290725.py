@@ -363,7 +363,7 @@ logger.propagate = False  # Prevent duplicate logs
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="Bank Mega Image Generator API",
+    title=" Image Generator API",
     description="A wrapper for Leonardo AI API to generate images",
     version="1.0.0"
 )
@@ -504,7 +504,7 @@ generated_images = {}
 
 # Initialize OpenAI client for Qwen
 client = OpenAI(
-    api_key=os.getenv("DASHSCOPE_API_KEY", 'sk-5d71cf15539f46ef9ea9283a821f7ee7'),
+    api_key=os.getenv("DASHSCOPE_API_KEY", ''),
     base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
 )
 
@@ -1212,7 +1212,7 @@ def improve_alpha_edges(image, threshold=180, edge_feather=4, use_gaussian_blur=
 
 @app.get("/")
 def read_root():
-    return {"message": "Bank Mega Image Generator API", "status": "running", "api_key_set": bool(LEONARDO_API_KEY)}
+    return {"message": " Image Generator API", "status": "running", "api_key_set": bool(LEONARDO_API_KEY)}
 
 @app.get("/generate-image")
 async def generate_image(
@@ -5667,8 +5667,8 @@ def create_gradio_ui():
         except:
             return gr.update(value=None, visible=False)
 
-    with gr.Blocks(title="Bank Mega Image Generator", theme='allenai/gradio-theme') as interface:
-        gr.Markdown("# Bank Mega Image Generator")
+    with gr.Blocks(title=" Image Generator", theme='allenai/gradio-theme') as interface:
+        gr.Markdown("#  Image Generator")
         
         # Create tabbed interface
         with gr.Tabs() as main_tabs:
@@ -15114,7 +15114,7 @@ if __name__ == "__main__":
     
     # Ensure logging is properly set up
     print("="*60)
-    print("Starting Bank Mega Image Generator")
+    print("Starting  Image Generator")
     print("Logging level:", logging.getLevelName(logger.level))
     print("Logger handlers:", logger.handlers)
     print("="*60)
