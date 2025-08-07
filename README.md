@@ -6,6 +6,7 @@
 - Background Processing : Automatic background removal using Photoroom and BiRefNet
 - Card Template Application : Applies generated images to customizable card templates
 - Batch Processing : Handles multiple images and ZIP file inputs
+- Embedded Inpainting Function: Utilize Ideogram to inpaint selected subject or objects
 ## Key Components
 ### Image Generation Pipeline
 - Provider Selection : Supports Leonardo AI (Flux Dev, Phoenix), Ideogram (V2/V3), and Imagen-4 (Fast/ Regular/Ultra)
