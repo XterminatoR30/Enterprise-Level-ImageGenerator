@@ -13902,12 +13902,12 @@ def create_google_drive_service():
         print(f"Google Drive error: {str(e)}")
         return None
 
-    SERVICE_ACCOUNT_FILE = 'gleaming-cove-460406-v6-3a6de69a79d7.json'
+    SERVICE_ACCOUNT_FILE = ''
     API_NAME = 'drive'
     API_VERSION = 'v3'
     SCOPES = ['https://www.googleapis.com/auth/drive']
-    SHARED_DRIVE_ID ='1rGP_5RIbYkqrJ1KEgXH8SHN8bFaBtkpm'
-    SUBJECT = 'superuser@aisensum.com'
+    SHARED_DRIVE_ID =''
+    SUBJECT = ''
     
     # Check if service account file exists
     if not os.path.exists(SERVICE_ACCOUNT_FILE):
