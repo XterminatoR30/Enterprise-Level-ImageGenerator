@@ -5,7 +5,7 @@
 - **Leonardo AI**: Advanced diffusion models with PhotoReal capabilities
 - **Ideogram AI**: Multiple model variants with extensive style presets
 - **Google Imagen-4/4-Ultra**: Latest text-to-image models via Replicate
-- **Qwen Vision**: Alibaba's multimodal AI for prompt enhancement
+- **Qwen 2.5 72B**: Alibaba's multimodal AI for prompt enhancement
 
 ### Advanced Image Processing
 - **Background Removal**: Multiple engines (Rembg, BiRefNet, Photoroom)
