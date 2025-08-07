@@ -137,12 +137,10 @@ def get_gmt7_filename_timestamp():
 # Process generated_images function defined inline below
 # (replaces import from separate file)
 PHOTOROOM_API_KEY = os.getenv("PHOTOROOM_API_KEY", "")
-
-# Set Replicate API key for Imagen-4 Image functionality
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-openai_client = OpenAI(api_key=OPENAI_API_KEY)  # Still needed for Qwen prompt generation
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
-# Add Replicate API key for Imagen-4
+
 REPLICATE_API_KEY = os.getenv("REPLICATE_API_TOKEN", "")
 os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_KEY
 
@@ -332,8 +330,6 @@ def safe_file_handler_imagen4(file_data):
 
 LEONARDO_API_KEY = os.getenv("LEONARDO_API_KEY")
 if not LEONARDO_API_KEY:
-    # Fallback to hardcoded key
-    # LEONARDO_API_KEY = "97edf05a-f02f-4c16-8148-e06531941c28"
     LEONARDO_API_KEY = ""
     logging.warning("Using fallback Leonardo API key. Please set LEONARDO_API_KEY environment variable for security.")
 
@@ -366,7 +362,7 @@ app.add_middleware(
 )
 
 # Leonardo API base URL
-LEONARDO_API_BASE_URL = "https://cloud.leonardo.ai/api/rest/v1"
+LEONARDO_API_BASE_URL = ""
 
 # Directory to save generated images
 IMAGES_DIR = "generated_output"
@@ -2668,8 +2664,8 @@ def remove_background_photoroom(input_path):
 
 # Initialize OpenAI client for Qwen
 client = OpenAI(
-    api_key=os.getenv("DASHSCOPE_API_KEY", 'sk-5d71cf15539f46ef9ea9283a821f7ee7'),
-    base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+    api_key=os.getenv("DASHSCOPE_API_KEY", ''),
+    base_url=""
 )
 
 # Update the upload_and_generate_image function to handle multiple reference images and card templates
