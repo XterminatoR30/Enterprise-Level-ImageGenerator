@@ -8787,7 +8787,7 @@ def get_aws_credentials():
     """Read AWS credentials from the credentials file"""
     config = configparser.ConfigParser()
     try:
-        config.read('aws_credentials.txt')
+        config.read('')
         return {
             'bucket_name': config.get('AWS', 'bucket_name'),
             'region': config.get('AWS', 'region'),
